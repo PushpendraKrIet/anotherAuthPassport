@@ -1,0 +1,51 @@
+<h1 style="
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 50px;
+font-family: Consolas;
+">
+Signup</h1>
+
+<!doctype html>
+<html>
+    <head>
+        <title>Node Authentication</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <style>
+        body { padding-top: 80px; }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1><span class="fas fa-chess-king"></span> SignUp<span class="fas fa-child"></span></h1>
+                <% if (message.length > 0) {%>
+                    <div class="alert alert-danger"><%= message %></div>
+                <% } %>
+
+                <!-- LOGIN FORM -->
+                <form action="/signup" method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg">SignUp</button>
+                </form>
+
+                <hr>
+
+                <p>Already have an account? <span class="fas fa-blind"></span><span class="fas fa-baseball-ball"></span> <a href="/login">Login</a></p>
+                <p>Or go <span class="fas fa-bed"></span><a href="/"> Home</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>
